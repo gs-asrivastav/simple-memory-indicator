@@ -1,5 +1,7 @@
 # Simple Memory Indicator
 
+![Sample](image.jpg)
+
 ## How to build?
 ```
     1. Run python setup.py py2app
