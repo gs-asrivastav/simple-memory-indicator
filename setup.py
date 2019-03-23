@@ -24,7 +24,8 @@ OPTIONS = {
         'CFBundleIdentifier': "com.gs.osx.memory.indicator",
         'CFBundleVersion': "0.1.0",
         'CFBundleShortVersionString': "0.1.0",
-        'NSHumanReadableCopyright': u"Copyright © 2015, Avneesh Srivastava, All Rights Reserved"
+        'NSHumanReadableCopyright': u"Copyright © 2015, Avneesh Srivastava, All Rights Reserved",
+        'LSUIElement': 1
     }
 }
 
