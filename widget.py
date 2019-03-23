@@ -1,3 +1,4 @@
+import emoji
 import psutil
 import requests
 import rumps
@@ -49,6 +50,15 @@ def convert(val, divisor):
     return round(val / divisor, 2)
 
 
+def get_emoticon(percentage):
+    if percentage <= 50:
+        return 'star-struck'
+    elif percentage <= 75:
+        return 'worried'
+    else:
+        return 'rage'
+
+
 def get_memory():
     """
 
@@ -58,7 +68,8 @@ def get_memory():
     available, available_unit = convert_value(mem_usage.used)
     total, total_unit = convert_value(mem_usage.total)
     pct = round(mem_usage.percent, 2)
-    message = "{0}{1}/{2}{3} [{4}%]".format(available, available_unit, total, total_unit, pct)
+    message = emoji.emojize("{0}{1}/{2}{3} [{4}%] :{5}:".format(available, available_unit, total,
+                                                                total_unit, pct, get_emoticon(pct)), use_aliases=True)
     return message
 
 
