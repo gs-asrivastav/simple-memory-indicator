@@ -1,0 +1,5 @@
+name: python36
+dependencies:
+  - python=3.6
+  - py2app
+  - rumps

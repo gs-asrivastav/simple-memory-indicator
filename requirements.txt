@@ -1,0 +1,4 @@
+requests
+rumps
+psutil
+py2app
