@@ -77,5 +77,5 @@ class BatteryIndicator(rumps.App):
 
 
 if __name__ == "__main__":
-    bi = BatteryIndicator(name='Currency Indicator')
+    bi = BatteryIndicator(name='Currency Indicator', quit_button=None)
     bi.run()
