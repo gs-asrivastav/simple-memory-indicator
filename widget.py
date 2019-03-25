@@ -1,21 +1,6 @@
 import emoji
 import psutil
-import requests
 import rumps
-
-
-def get_price(coin_type: str = 'BTC-INR'):
-    """
-
-    :param coin_type:
-    :return:
-    """
-    response = requests.get(f'https://api.coinbase.com/v2/prices/{coin_type}/buy')
-    if response.status_code == 200:
-        body = response.json()['data']
-        return "{}: {} {}".format(body['base'], body['amount'], body['currency'])
-    else:
-        return '{}: N/A'.format(coin_type)
 
 
 def convert_value(value):
