@@ -2,37 +2,7 @@ import emoji
 import psutil
 import rumps
 
-
-def convert_value(value):
-    """
-
-    :param value:
-    :return:
-    """
-    # Conversion to DB
-    converted = value // (1024 ** 3)
-    if converted is not 0:
-        return convert(value, 1024 ** 3), 'GB'
-
-    converted = value // (1024 ** 2)
-    if converted is not 0:
-        return convert(value, 1024 ** 2), 'MB'
-
-    converted = value // 1024
-    if converted is not 0:
-        return convert(value, 1024), 'KB'
-
-    return convert(value, 1), 'B'
-
-
-def convert(val, divisor):
-    """
-
-    :param val:
-    :param divisor:
-    :return:
-    """
-    return round(val / divisor, 2)
+from utils import convert_value
 
 
 def get_emoticon(percentage):
